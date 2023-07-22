@@ -40,3 +40,5 @@ docker run -d --mount source=yogi,target=/app nginx:latest
 docker volume rm yogi
 ```
 
+<img src=https://github.com/yo-404/Docker/blob/main/docker-container-with-volume-mount/images/1.png?raw=true>
+
