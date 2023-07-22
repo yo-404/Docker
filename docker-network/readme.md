@@ -1,4 +1,4 @@
-![image](https://github.com/yo-404/Docker/assets/100558220/a3e63b43-e213-4cf8-89f0-f509df131528)### Docker Networking
+### Docker Networking
 
 Docker networking priciples can be enforced over the containers in order to let them communicate to each other or to stop them from communicating from each other . 
 
