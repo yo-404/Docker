@@ -39,6 +39,8 @@ docker run -d --mount source=yogi,target=/app nginx:latest
 ```
 docker volume rm yogi
 ```
-
-<img src=https://github.com/yo-404/Docker/blob/main/docker-container-with-volume-mount/images/1.png?raw=true>
+![1](https://github.com/yo-404/Docker/assets/100558220/92ad3f7f-f47d-4f06-9e54-f09142186d4f)
+![2](https://github.com/yo-404/Docker/assets/100558220/36451749-90a4-4c80-bb65-20559d89d2ab)
+![3](https://github.com/yo-404/Docker/assets/100558220/a06d0b52-a201-457a-8c9c-117a5648c9a9)
+![4](https://github.com/yo-404/Docker/assets/100558220/0e8be90e-6e01-4173-9acd-454569dfc48a)
 
