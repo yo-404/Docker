@@ -83,3 +83,30 @@ macVlan - Some applications, especially legacy applications or applications whic
 
 IPvlan - The IPvlan driver gives users total control over both IPv4 and IPv6 addressing. The VLAN driver builds on top of that in giving operators complete control of layer 2 VLAN tagging and even IPvlan L3 routing for users interested in underlay network integration. For overlay deployments that abstract away physical constraints see the multi-host overlay driver.
 
+### What is Multistage build in Docker
+
+Multi stage build allows you to build your Docker container in multiple stages allowing you to copy artifacts from one stage to other . The major advantages of this is to build light weight containers .
+
+### What are disto-less images in Docker
+
+A Distro-less images contains only your application and its runtime dependencies with a very minimum operating system libraries .They do not contain package managers , shell or any other programs you would expect to find in a standard linus distribution . They are very small and lightweight images .
+
+some of the commonly used distroless images used can be found this git repo - https://github.com/GoogleContainerTools/distroless
+
+
+### Challenges with Docker
+
+- Docker is a single daemon process. which can be the single point of failure ie it the docker daemon goes down for some reason it will lead all the application to go down as well.
+
+- Docker runs as a root user .Any process running as a root user can have adverse effects .
+
+- Resource Constraints - Running too many containers on a single host may lead to resource constraints and hence slow performance/crashes.
+
+
+### How can we secure the containers
+
+1. By using distroless images or images with not too many packages so that there are less common vulnerability exposure or security issues
+
+2. Ensure that network is configured properly . Custom bridge networks can be used to isolate containers.
+
+3. use utilities like sync to scan your container images and look for vulnerabilites.
