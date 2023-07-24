@@ -52,13 +52,17 @@ docker run -d --name login nginx:latest
 
 docker inspect login
 ```
-img 1
+
+![image](https://github.com/yo-404/Docker/assets/100558220/bb7dd667-f6c1-46c5-8400-c066a82639a7)
+
 
 ```
 docker run -d --name logout nginx:latest
 docker inspect logout
 ```
-img2
+
+![image](https://github.com/yo-404/Docker/assets/100558220/2a1e417d-9936-4f26-80e2-9df1ac0b54d5)
+
 
 ```
 docker exec -it login /bin/bash
@@ -66,6 +70,10 @@ apt-get install iputils-ping -y
 //installed the iputils package to ping to the other container
 ping 172.17.0.3
 ```
+
+![image](https://github.com/yo-404/Docker/assets/100558220/def563ee-e0ab-4139-926d-829ae5838c2a)
+
+
 ### creating a third container with custom network
 
 ```
@@ -73,8 +81,10 @@ docker network create secure-network
 docker run -d --name finance --network=secure-network nginx:latest
 docker inspect finance
 ```
-img4
 
+![image](https://github.com/yo-404/Docker/assets/100558220/1b526e4f-dee3-4d4f-b518-36004ebbbca7)
+
+![image](https://github.com/yo-404/Docker/assets/100558220/54b1bbab-010d-46bb-a98a-ffeab61bacd4)
 
 
 ```
@@ -83,7 +93,9 @@ docker exec -it login /bin/bash
 ping 172.18.0.2
 //pinging to finance container from login container
 ```
-img6
+
+![image](https://github.com/yo-404/Docker/assets/100558220/6583f76b-1f80-4ffa-998e-e692086728e4)
+
 
 Ping was unsuccessful because both the containers are in different network bridge
 
@@ -95,6 +107,7 @@ docker run -d --name host-demo --network=host nginx:latest
 docker inspect host-demo
 
 ```
-img 7 
+![image](https://github.com/yo-404/Docker/assets/100558220/e5b35245-7251-40f9-8656-377feb73a6bd)
+
 
 as we can see the container is not given IP address and is going to use the network configurations same as the host .
